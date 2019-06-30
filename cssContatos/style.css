@@ -1,0 +1,196 @@
+@charset "UTF-8";
+@import url("//fonts.googleapis.com/earlyaccess/notosanstc.css");
+@import url("//fonts.googleapis.com/css?family=Courgette");
+
+@font-face {
+  font-family: "微軟正黑體";
+  src: local("微軟正黑體");
+  unicode-range: U+2e80-2fdf, U+3400-9fe6, U+20000-2b81d, U+3040-30ff;
+}
+@font-face {
+  font-family: "Arial";
+  src: local("Arial");
+  unicode-range: U+0000-024f;
+}
+
+body {
+  background-color: black;
+  font-family: "Arial", "Noto Sans TC";
+}
+
+h1 {
+  margin-top: 5px;
+  color:;
+  font-size: 50px;
+  text-align: center;
+}
+ 
+.content {
+    background: #fff;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    border-style: double;
+    border-radius: 14px;
+    border-color:aqua;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 20px;
+  background: #f6f6f6;
+  font-size: 22px;
+  color: #555;
+  position: relative;
+  border-bottom: 1px solid #e6e6e6;
+  height: 50px;
+}
+li:nth-child(even) {
+  background: #f2f2f2;
+}
+li span {
+  display: block;
+}
+li span:nth-child(2) {
+  font-size: 16px;
+  margin-top: 6px;
+  color: #999;
+}
+li div {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  background: rgba(255, 255, 255, 0.6);
+  width: 40px;
+  text-align: center;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+form input {
+  float: left;
+  width: 38%;
+  margin: 0;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  margin: 0 1%;
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+form input:focus {
+  outline: none;
+  border-bottom: 3px solid #3d9699;
+  padding-bottom: 8px;
+  transition: all ease 0.2s;
+}
+
+button {
+  border: 1px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 13px;
+  width: 14%;
+  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: ;
+}
+
+button:hover{
+background-color: yellow;
+    color: ;
+    
+}
+
+#imgLIVRO{
+    
+    text-align: center;
+}
+#myInput {
+  background-image: url('searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: absolute; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 14px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #353A40;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#corpo {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 17px;}
+}
+
+

@@ -1,0 +1,530 @@
+/*!
+ * Start Bootstrap - Agency v3.3.7+1 (http://startbootstrap.com/template-overviews/agency)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */.btn-primary.active,
+.btn-primary:active,
+.btn-xl.active,
+.btn-xl:active,
+.open .dropdown-toggle.btn-primary,
+.open .dropdown-toggle.btn-xl {
+	background-image: none
+}
+
+body {
+	overflow-x: hidden;
+	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	webkit-tap-highlight-color: #3d9699
+}
+
+.modal-footer{
+    align-content: center;
+}
+
+.textinho {
+
+	color: #ffffff;
+	font-size: 30px;
+}
+.btn-primary,
+.btn-xl,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700
+}
+
+.text-muted {
+	color: #777
+}
+
+.text-primary,
+a {
+	color: #000
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.75
+}
+
+p.large {
+	font-size: 16px
+}
+
+a,
+a.active,
+a:active,
+a:focus,
+a:hover {
+	outline: 0
+}
+
+a.active,
+a:active,
+a:focus,
+a:hover {
+	color: #3d9699
+}
+
+.img-centered {
+	margin: 0 auto
+}
+
+.bg-light-gray {
+	background-color: #eee
+}
+
+.bg-darkest-gray {
+	background-color: #222
+}
+
+.btn-primary {
+	color: #fff;
+	background-color: #fed136;
+	border-color: #3d9699
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover,
+.open .dropdown-toggle.btn-primary {
+	color: #fff;
+	background-color: #fed136;
+	border-color: #fed136
+}
+
+.btn-primary.disabled,
+.btn-primary.disabled.active,
+.btn-primary.disabled:active,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled],
+.btn-primary[disabled].active,
+.btn-primary[disabled]:active,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-primary.active,
+fieldset[disabled] .btn-primary:active,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+	background-color: #fed136;
+	border-color: #fed136
+}
+
+.btn-primary .badge {
+	color: #3d9699;
+	background-color: #fff
+}
+
+.btn-xl {
+	color: #fff;
+	background-color: #3d9699;
+	border-color: #3d9699;
+	border-radius: 3px;
+	font-size: 18px;
+	padding: 20px 40px
+}
+
+.btn-xl.active,
+.btn-xl:active,
+.btn-xl:focus,
+.btn-xl:hover,
+.open .dropdown-toggle.btn-xl {
+	color: #fff;
+	background-color: #fed136;
+	border-color: #fed136
+}
+
+.btn-xl.disabled,
+.btn-xl.disabled.active,
+.btn-xl.disabled:active,
+.btn-xl.disabled:focus,
+.btn-xl.disabled:hover,
+.btn-xl[disabled],
+.btn-xl[disabled].active,
+.btn-xl[disabled]:active,
+.btn-xl[disabled]:focus,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl,
+fieldset[disabled] .btn-xl.active,
+fieldset[disabled] .btn-xl:active,
+fieldset[disabled] .btn-xl:focus,
+fieldset[disabled] .btn-xl:hover {
+	background-color: #3d9699;
+	border-color: #3d9699
+}
+
+.btn-xl .badge {
+	color: #3d9699;
+	background-color: #fff
+}
+
+.navbar-custom {
+	background-color: #222;
+	border-color: transparent
+}
+
+.navbar-custom .navbar-brand {
+	color: #3d9699;
+	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive
+}
+
+.navbar-custom .navbar-brand.active,
+.navbar-custom .navbar-brand:active,
+.navbar-custom .navbar-brand:focus,
+.navbar-custom .navbar-brand:hover {
+	color: #3d9699
+}
+
+.navbar-custom .nav li a,
+.navbar-custom .navbar-toggle {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #fff;
+	text-transform: uppercase
+}
+
+.navbar-custom .navbar-collapse {
+	border-color: rgba(255, 255, 255, .02)
+}
+
+.navbar-custom .navbar-toggle {
+	background-color: #3d9699;
+	border-color: #3d9699;
+	font-size: 12px
+}
+
+.navbar-custom .navbar-toggle:focus,
+.navbar-custom .navbar-toggle:hover {
+	background-color: #3d9699
+}
+
+.navbar-custom .nav li a {
+	font-weight: 400;
+	letter-spacing: 1px
+}
+
+.navbar-custom .nav li a:focus,
+.navbar-custom .nav li a:hover {
+	color: #fed136;
+	outline: 0
+}
+
+.navbar-custom .navbar-nav>.active>a {
+	border-radius: 0;
+	color: #fff;
+	background-color: #3d9699;
+}
+
+.navbar-custom .navbar-nav>.active>a:focus,
+.navbar-custom .navbar-nav>.active>a:hover {
+	color: #fff;
+	background-color: #3d9699
+}
+
+@media (min-width:768px) {
+	.navbar-custom {
+		background-color: transparent;
+		padding: 25px 0;
+		-webkit-transition: padding .3s;
+		-moz-transition: padding .3s;
+		transition: padding .3s;
+		border: none
+	}
+	.navbar-custom .navbar-brand {
+		font-size: 2em;
+		-webkit-transition: all .3s;
+		-moz-transition: all .3s;
+		transition: all .3s
+	}
+	.navbar-custom .navbar-nav>.active>a {
+		border-radius: 3px
+	}
+	.navbar-custom.affix {
+		background-color: #222;
+		padding: 10px 0
+	}
+	.navbar-custom.affix .navbar-brand {
+		font-size: 1.5em
+	}
+}
+
+header {
+	background-image: url(../img/MenuFundo.jpg);
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+	-o-background-size: cover;
+	text-align: center;
+	color: #fff
+}
+
+header .intro-text {
+	padding-top: 100px;
+	padding-bottom: 50px
+}
+
+header .intro-text .intro-lead-in {
+	font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: italic;
+	font-size: 22px;
+	line-height: 22px;
+	margin-bottom: 25px
+}
+
+header .intro-text .intro-heading {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 50px;
+	margin-bottom: 25px
+}
+
+@media (min-width:768px) {
+	header .intro-text {
+		padding-top: 300px;
+		padding-bottom: 200px
+	}
+	header .intro-text .intro-lead-in {
+		font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-style: italic;
+		font-size: 40px;
+		line-height: 40px;
+		margin-bottom: 25px
+	}
+	header .intro-text .intro-heading {
+		font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 100;
+		font-size: 30px;
+		line-height: 30px;
+		margin-bottom: 50px
+	}
+}
+
+
+section {
+	padding: 100px 0
+}
+
+section h2.section-heading {
+	font-size: 40px;
+	margin-top: 0;
+	margin-bottom: 15px
+}
+
+section h3.section-subheading {
+	font-size: 16px;
+	text-transform: none;
+	font-weight: 400;
+	margin-bottom: 75px
+}
+
+@media (min-width:768px) {
+	section {
+		padding: 150px 0
+	}
+}
+
+.service-heading {
+	margin: 15px 0;
+	text-transform: none
+}
+
+
+
+footer span.copyright,
+footer ul.quicklinks {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+
+
+
+.team-member {
+	text-align: center;
+	margin-bottom: 50px
+}
+
+.team-member img {
+	margin: 0 auto;
+	border: 7px solid #fff
+}
+
+.team-member h4 {
+	margin-top: 25px;
+	margin-bottom: 0;
+	text-transform: none
+}
+
+.team-member p {
+	margin-top: 0
+}
+
+.team-member1 {
+	text-align: center;
+	margin-bottom: 50px
+
+}
+
+.team-member1 img {
+	margin: 0 auto;
+	margin-left: 190px;
+	border: 7px solid #fff
+
+}
+
+.team-member1 h4 {
+	margin-top: 35px;
+	margin-left: 215px;
+	margin-bottom: 0;
+	text-transform: none
+
+}
+
+.team-member1 p {
+	margin-top: 0;
+	margin-left: 210px;
+}
+
+
+section#contact {
+	background-color: #222;
+	background-image: url(../img/FundoContato.jpg);
+	background-position: center;
+	background-repeat: no-repeat
+}
+
+section#contact .section-heading {
+	color: #fff
+}
+
+section#contact .form-group {
+	margin-bottom: 25px
+}
+
+section#contact .form-group input,
+section#contact .form-group textarea {
+	padding: 20px
+}
+
+section#contact .form-group input.form-control {
+	height: auto
+}
+
+section#contact .form-group textarea.form-control {
+	height: 236px
+}
+
+section#contact .form-control:focus {
+	border-color: #fed136;
+	box-shadow: none
+}
+
+section#contact ::-webkit-input-placeholder {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: #eee
+}
+
+section#contact :-moz-placeholder {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #eee
+}
+
+section#contact ::-moz-placeholder {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #eee
+}
+
+section#contact :-ms-input-placeholder {
+	font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	color: #eee
+}
+
+section#contact .text-danger {
+	color: #e74c3c
+}
+
+footer {
+	padding: 25px 0;
+	text-align: center
+}
+
+footer span.copyright {
+	line-height: 40px;;
+	text-transform: none
+}
+
+footer ul.quicklinks {
+	margin-bottom: 0;
+	line-height: 40px;
+	text-transform: none
+}
+
+ul.social-buttons {
+	margin-bottom: 0
+}
+
+ul.social-buttons li a {
+	display: block;
+	background-color: #222;
+	height: 40px;
+	width: 40px;
+	border-radius: 100%;
+	font-size: 20px;
+	line-height: 40px;
+	color: #fff;
+	outline: 0;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s
+}
+
+ul.social-buttons li a:active,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:hover {
+	background-color: #fed136
+}
+
+
+.btn.active,
+.btn:active,
+.btn:active:focus,
+.btn:focus {
+	outline: 0
+}
+
+
+
+::-moz-selection {
+	text-shadow: none;
+	background: #55ACA2
+}
+
+::selection {
+	text-shadow: none;
+	background: #55ACA2
+}
+
+img::selection {
+	background: 0 0
+}
+
+img::-moz-selection {
+	background: 0 0
+}

@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    background-color: ;
+}
+
+p {
+  color:;
+}
+
+.todo-new {
+  display: inline-block;
+}
+.todo-new__item { 
+    display: inline-block;
+    border-radius: 4px;
+    border-color: darkgray;
+    border-style: double;
+    margin: 0 0.5rem;
+    padding: 1rem;
+    display: block;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.todo-new input,
+.todo-new button {
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.todo-new input:focus {
+  transform: translateY(-2px);
+  color: #444;
+  outline: none;
+}
+.todo-new button {
+  cursor: pointer;
+  border: 1px solid #d4d4d4;
+  background-color: #f8f8f8;
+}
+.todo-new button:focus {
+  outline: none;
+}
+.todo-new button:hover {
+  transform: translateY(-2px);
+  border: 1px solid #d4d4d4;
+  background-color: yellow;
+  color: ;
+  outline: none;
+}
+
+.todo {
+  margin: 0 -0.5rem;
+  padding: 0;
+    border-color: darkgray;
+    border-radius: 10px;
+  display: block;
+    
+  width: 100%;
+  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+}
+.todo__item {
+  position: relative;
+  display: inline-block;
+    border-style: double;
+    border-color: darkgray;
+    border-radius: 10px;
+}
+.todo__item:hover .todo__item__delete {
+  margin-left: -0.8rem;
+}
+.todo__item__delete {
+  position: relative;
+  margin-left: -3.6rem;
+  border-radius: 0 4px 4px 0;
+  display: inline-block;
+  background-color: red;
+  color: #fff;
+  padding: 1rem;
+  z-index: 0;
+  transition: margin-left 0.25s ease;
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .todo__item__delete {
+    margin-left: -0.8rem;
+  }
+}
+.todo__item__done {
+  vertical-align: top;
+  cursor: pointer;
+}
+.todo__item__description {
+  position: relative;
+  border-radius: 4px;
+  margin: 0.5rem;
+    background-color: white;
+  padding: 1rem;
+  display: inline-block;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  z-index: 1;
+}
+.todo__item__description.completed {
+  background-color: #82d601;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+.tela-principal {
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+#imagem {
+
+	margin-right: 20px;
+}
+.cards {
+    margin-left: 8%;
+    display: inline;
+    float: left;
+}
+
+.cards1 {
+	margin-left: 8%;
+	display: inline;
+    float: left;
+
+}
+.cards2 {
+    margin-left: 8%;
+	display: inline;
+    float: left;
+
+}
+.cards3 {
+    margin-left: 8%;
+	display: inline;
+    float: left;
+
+}
+
+.imagT {
+
+	margin-left: 800px;
+	margin-top: -120px;
+}
+
+.question {
+	margin-left: 55px;
+}
+
+.butPlanejamento {
+
+	margin-left: 55px;
+	margin-top: -25px;
+}
+
+#box {
+	margin-left: 50px;
+	width: 1000px;
+	height: 190px;
+    background-color:#ADD8E6;
+    border-radius: 10px;
+}
+
+.circle {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 55px;
+  height: 50px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.circle img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+.corpo{
+    height:100%;
+	width:100%;
+	margin:auto;
+    margin-left:auto;
+	margin-right: auto;
+}
+
+
+body {
+     height:100%;
+	 width:100%;
+	 margin:auto;
+     margin-left:auto;
+	 margin-right: auto;
+}
+
+.btn-primary{
+    margin-left: 10px;
+}
+
+.label1{
+    margin-top: 12%;
+    margin-right: 20%;
+}
+
+.loading{
+   margin-left: -19%
+}
+.label11{
+    margin-left: -18%;
+}
+.atalhosBTS{
+    margin-left: 15%;
+}
+
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+    margin-left: -9%;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: absolute; /* Stay in place */
+  z-index: 3; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 14px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #353A40;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#corpo {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 17px;}
+}
+
+.btnbts{
+    margin-right: 30px;
+    color: #353A40;
+}
+
+#linkLogout{
+    float: ;
+}
+
+#linkPerfil{
+float:;
+}
+
+#imagemPer{
+    margin-top: 10%;
+}
+
+#imgperfil{
+    width: 150px;
+    height: 150px;
+    margin-top: 8%
+}
+
+.corpo1{
+    
+}
+
+#page-top{
+    display: block;
+    margin-left: 0 auto;
+    padding-right:  auto;
+    align-content: center;
+    max-width:100%;height:auto;
+    background-color: #fff;
+    
+}
+
+#labelper{
+    margin-left: 46%;
+    color: white
+}
+
+.objectImage{
+    margin-top: 20px;
+    
+}
+
+#root{
+    text-align-last: center;
+}
