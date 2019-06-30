@@ -1,0 +1,84 @@
+;(()=>{
+  // Initialize Firebase Start
+  const config = {
+    apiKey: "AIzaSyAmn6MUweFYiY9DIYgavxJIP7yGiPhmHRs",
+    authDomain: "web-quickstart-0000.firebaseapp.com",
+    databaseURL: "https://web-quickstart-0000.firebaseio.com",
+    projectId: "web-quickstart-0000",
+    storageBucket: "web-quickstart-0000.appspot.com",
+    messagingSenderId: "463063500742"
+  };
+  firebase.initializeApp(config);
+  // Initialize Firebase End
+
+  const db = firebase.firestore();
+  db.settings({ timestampsInSnapshots: true });
+  
+  
+  const cafeList = document.getElementById('cafe-list');
+  const form = document.getElementById('add-cafe-form');
+  //  create element and render cafe
+  function renderCafe(doc){
+    let li = document.createElement('li');
+    let name = document.createElement('span');
+    let city = document.createElement('span');
+    let cross = document.createElement('div');
+    
+    li.setAttribute('data-id', doc.id);
+    name.textContent = doc.data().name;
+    city.textContent = doc.data().city;
+    cross.textContent = 'x';
+    
+    li.appendChild(name);
+    li.appendChild(city);
+    li.appendChild(cross);
+    
+    cafeList.appendChild(li);
+    
+    // 刪除資料
+    cross.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      let id = e.target.parentElement.getAttribute('data-id');
+      db.collection('cafes').doc(id).delete();
+    });
+  }
+  
+  // 篩選
+  // db.collection('cafes').where('city', '==', 'manchester').get().then()
+  // 取得資料
+  db.collection('cafes').where('city', '==', 'manchester').orderBy('name').get().then((snapshot) => {
+    snapshot.docs.forEach((doc) => {
+      renderCafe(doc);
+    });
+  });
+  function removeSpace(e) {
+    return e.replace(/\s+/g,'');
+  }
+  // 儲存資料
+  form.addEventListener('submit', (e)=>{
+    e.preventDefault();
+    const formName = form.name.value.trim();
+    const formCity = form.city.value.trim();
+    if( removeSpace(formName) !== '' && removeSpace(formCity) !== ''){
+      db.collection('cafes').add({
+        name: removeSpace(formName),
+        city: removeSpace(formCity)
+      });
+      form.reset();
+    }else{
+      alert('輸入框請勿留白，謝謝您的配合！！');
+    }
+  });
+  // Real-time listener
+  db.collection('cafes').orderBy('city').onSnapshot(snapshot => {
+    let changes = snapshot.docChanges();
+    changes.forEach(change => {
+      if(change.type === 'added'){
+        renderCafe(change.doc);
+      }else if(change.type === 'removed'){
+        const li = cafeList.querySelector('[data-id=' + change.doc.id + ']');
+        cafeList.removeChild(li);
+      }
+    });
+  });
+})()
