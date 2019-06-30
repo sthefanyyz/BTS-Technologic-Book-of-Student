@@ -1,0 +1,98 @@
+#espaco{
+	
+	    height: 259px;
+        width: 217px;
+        position:fixed;
+        float: left;
+        left:0;
+        top:0;
+        margin:1px 2px 3px 4px;
+        z-index: 98;
+        overflow:visible;
+        opacity:0.9;
+        filter:alpha(opacity=90);
+}
+
+
+.btNota {
+        margin-left: 340px;
+        margin-top: 70px;
+}
+
+.btLemb {
+
+        margin-left: 590px;
+        margin-top: -38px;
+}
+
+.btLista {
+
+        margin-left: 870px;
+        margin-top: -38px;
+}
+
+
+
+#imagem {
+
+        margin-right: 10px;
+}
+
+#nomePlan{
+ 
+    width: 300px;
+    height: 50px;
+
+    
+}
+
+plan{
+
+    margin-left: 80px;
+    width: 300px;
+    height: 50px;
+}
+
+.circle {
+  background-color: #aaa;
+  border-radius: 50%;
+  width: 55px;
+  height: 50px;
+  margin-right: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#descricao{
+    width: 300px;
+    height: 50px;
+    
+}
+
+.caixa{
+margin-top: 10px;
+width: 150px;
+    height: 45px;
+    
+}
+
+.circle img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+.index1{
+    background-color: #000;
+    
+}
+
+h3{
+    font-family: sans-serif;
+    color: #fff;
+}
+
+h1{
+    color: #fff;
+}

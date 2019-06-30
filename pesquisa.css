@@ -1,0 +1,16 @@
+
+#txt-consulta{
+    margin-left: 20px;
+    
+    width: 500px;
+    height: auto;
+}
+.imgLupa{
+    width: 70px;
+    height: 70px;
+
+    margin-top: 3%;
+}
+.btn-primary{
+    margin-left: 10px;
+}

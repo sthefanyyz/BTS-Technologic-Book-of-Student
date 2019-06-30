@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='mainApp'>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Minhas Notas</title>
+    
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="cssNotas/style.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+      
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="icon" type="imagem/png" href="pngLivro.png"/>
+    <script src='angularJS/angular.min.js'></script>
+     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+     <script src='firebase.js'></script>
+     <script src='mainController.js'></script>
+     <script src='userController.js'></script>
+     <script src='perfilController.js'></script>
+     <script src="mainUserJs.js"></script>
+     <script src="mainUserJs.js"></script>
+     
+
+</head>
+
+  
+    <body div id="page-top" class="index" align="center" style="background-color: black;">
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" style="color: #20FFC6"><h2>Principal</h2></a>
+            <a href="mainUser.html"><img src="home.png"><h5 style="align: right;">Home</h5></a>
+            <a href="telaPerfilPrincipal.html"><img src="profile.png"><h5>Meu Perfil</h5></a>
+            <a href="Contatos.html"><img src="card.png"><h5>Contatos</h5></a>
+            <a href="calendarioTeste1.html"><img src="date.png"><h5>Calendário</h5></a>
+            <a href="notasP.html"><img src="edit.png"><h5>Notas</h5></a>
+            <a href="planejamentos.html"><img src="sketch.png"><h5>Planejamentos</h5></a>
+            <a href="#" style="color: #20FFC6"><h2>Ajuda</h2></a>
+            <a href="" onClick="mostrarModal" data-toggle="modal" data-target="#exampleModalCenter"><img src="info.png"><h5>Informações</h5></a>
+            <a href="" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"><img src="opinion.png"><h5>Enviar Feedback</h5></a>      
+            <a href="#" style="color: #20FFC6"><h2>Configurações</h2></a>
+            <a href="TelaPerfil.html"><img src="porca.png"><h5>Configurações do Perfil</h5></a>
+           
+  
+</div>
+
+    <div class="corpo">
+        
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+   
+      <p class="btnbts"><button class="openbtn" onclick="openNav()" style="color: #">&#9776;</button> </p>
+        <a class="nav
+        bar-brand" href="menuPrincipal.html">
+    <img src="logoatual.png" width="150" height="60" class="d-inline-block align-top" alt="" id="imgMen">
+  </a>
+        
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="mainUser.html"><span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="Contatos.html"><span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="calendarioTeste1.html"><span class="sr-only">(current)</span></a>
+      </li>
+       <div class="col-md-4">
+       <ul class="list-inline quicklinks">
+        <li class="nav-item active">
+                    
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Informações</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                         <ul type="disc">     
+                        <p><li>Nosso Menu possui uma ala disponível para informações sobre atualizações e nossas hashtags; </li></p>
+                              <hr/>
+
+                        <p><li>Nesta parte superior da nossa página tem atalhos para facilitar e levá-lo (a) rapidamente para visualizar o calendário, criar e visualizar os seus planejamento e para entrar em contato conosco, e visualizar o perfil; </li></p>
+                             <hr/>
+
+                        <p><li>Calendário - Lhe levará à uma página que informará o calendário completo do ano em que estamos, a data de hoje, datas comemorativas, mostrará também apenas o calendário do mês em que estamos. (Créditos ao icalendario, acesse icalendário.com); </li></p>
+                             <hr/>
+
+                        <p><li>Informações - Apresentação dos atalhos disponíveis para o usuário; </li></p>
+                             <hr/>
+
+                        <p><li>Criar Planejamento - Local onde você poderá, obviamente criar seus planejamentos, adicionar um título, torná-lo público ou privado, adicionar uma descrição, e organizá-lo como uma nota, um lembrete, ou uma lista; </li></p>
+                             <hr/>
+
+                        <p><li>Nos envie um e-mail - Fale conosco, mande ideias, reclame, elogie, expresse sua opinião para com o nosso site! </li></p>
+                             <hr/>
+
+                        <p><li>Perfil - Você poderá fazer alterações na sua conta como: foto de perfil, user, senha e biografia (atenção: o email não poderá ser modificado), e logo após poderá salvar sua alterações; </li></p>
+                             <hr/>
+
+                        <p><li>Logout - Saia da sua conta.</li></p>
+                             <hr/>
+                              
+                        <br><li><h5>Obrigada por juntar-se a nós do BTS!!! ;)</h5></li>
+                        </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        
+      </li>
+      </ul>
+      </div>
+
+    </ul>
+     
+      
+</div>
+         <ul>
+         <li class="nav-item dropdown no-arrow">
+             <div class='w3-container w3-right w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-right: 2%; max-width: 100px;' ng-controller= 'userController'>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{}}</span>
+               <img id="imgUserProfiler" src='{{userImgSource}}' alt="placeholder+image" style="width: 80%" class="w3-circle w3-margin-top">
+              </a>
+              <!-- Dropdown - User Information -->
+                
+                
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href='telaPerfilPrincipal.html' id="linkPerfil">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Perfil
+                </a>
+                <a class="dropdown-item" href="TelaPerfil.html">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Configurações
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Ajuda
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" id="linkLogout">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div> 
+             </div>
+            </li>
+             </ul>
+      </nav>
+        
+        <br>
+        <br>
+        <div align="center">
+        
+    <img class="imagNot" src="notes.png" />
+            </div>
+        <br>
+
+  <div id="root">
+  <h1 align="center" style="color:white;">Lista de Notas</h1>
+      <br>
+      <h3 align="center" style="color:white;">Criar Notas</h3>
+  <div class="todo-new">
+    <div class="todo-new__item">
+      <input type="text"
+             placeholder="Descrição"
+             v-model="task" />
+      <button @click="addTask()">Salvar</button>
+    </div>
+  </div>
+      <br><br>
+  <h2 align="center" style="color:white;">Lembrar</h2>
+  <div v-if="!remainingTasks.length" align="center">
+    <p align="center" style="color:white;">Nada aqui.</p>
+  </div>
+  <ul v-else
+      class="todo">
+    <li v-for="task in remainingTasks"
+        class="todo__item">
+      <label :for="task.id"
+             :class="task.completed ? 'completed' : ''"
+             class="todo__item__description">
+        <input type="checkbox"
+               :id="task.id"
+               class="todo__item__done"
+               @change="updateTask(task.id)"
+               :checked="task.completed">
+        {{ task.description }}
+      </label>
+    </li>
+  </ul>
+      <br>
+  <h2 align="center" style="color:white;">Concluído</h2>
+  <div v-if="!completedTasks.length">
+    <p align="center" style="color:white;">Nada ainda.</p>
+  </div>
+  <ul v-else
+      class="todo">
+    <li v-for="task in completedTasks"
+        class="todo__item">
+      <label :for="task.id"
+             :class="task.completed ? 'completed' : ''"
+             class="todo__item__description">
+        <input type="checkbox"
+               :id="task.id"
+               class="todo__item__done"
+               @change="updateTask(task.id)"
+               :checked="task.completed">
+        {{ task.description }}
+      </label>
+      <span class="todo__item__delete" @click="deleteTask(task.id)">
+            <!-- data-toggle="modal" data-target="#ExcluirModal" -->
+        <i class="fa fa-trash" aria-hidden="true"></i>
+      </span>
+    </li>
+  </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      
+      <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Você já vai?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+        <div class="modal-body">Selecione "Sair" para encerrar sua sessão.</div>
+        <div class="modal-footer" ng-controller= 'userController'>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" id="linkLogout" href="" ng-click='userLogout()'>Sair</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Modal Exclusao -->
+  <div class="modal fade" id="ExcluirModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Você tem certeza?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+        <div class="modal-body">Deseja excluir este item?</div>
+        <div class="modal-footer" ng-controller= 'userController'>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <button class="btn btn-danger" id="linkExcluir" style="color:white;" class="todo__item__delete">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+<script src='https://www.gstatic.com/firebasejs/5.0.4/firebase.js'></script>
+
+    <script  src="jsNotas/index.js"></script>
+        <script src="vendor/vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="sb-admin-2.min.js"></script>
+        </div>
+</body>
+
+</html>

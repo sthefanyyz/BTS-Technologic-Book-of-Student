@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" ng-app='mainApp'>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" type="imagem/png" href="pngLivro.png" />
+    <link rel="stylesheet" type="text/css" href="cssPlan.css">
+    <link rel="stylesheet" type="text/css" href="CssMainUser.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <script src='angularJS/angular.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+    <script src='firebase.js'></script>
+     <script src='planejamentoController.js'></script>
+    <script src='mainController.js'></script>
+    <script src='userController.js'></script>
+    <script src="mainUserJs.js"></script>
+</head>
+
+<body div id="page-top" class="index" align="center" style="background-color: black;" onload="myFunction()">
+        <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" style="color: #20FFC6"><h2>Principal</h2></a>
+            <a href="mainUser.html"><img src="home.png"><h5 style="align: right;">Home</h5></a>
+            <a href="telaPerfilPrincipal.html"><img src="profile.png"><h5>Meu Perfil</h5></a>
+            <a href="Contatos.html"><img src="card.png"><h5>Contatos</h5></a>
+            <a href="calendarioTeste1.html"><img src="date.png"><h5>Calendário</h5></a>
+            <a href="notasP.html"><img src="edit.png"><h5>Notas</h5></a>
+            <a href="planejamentos.html"><img src="sketch.png"><h5>Planejamentos</h5></a>
+            <a href="#" style="color: #20FFC6"><h2>Ajuda</h2></a>
+            <a href="" onClick="mostrarModal" data-toggle="modal" data-target="#exampleModalCenter"><img src="info.png"><h5>Informações</h5></a>
+            <a href="" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"><img src="opinion.png"><h5>Enviar Feedback</h5></a>      
+            <a href="#" style="color: #20FFC6"><h2>Configurações</h2></a>
+            <a href="TelaPerfil.html"><img src="porca.png"><h5>Configurações do Perfil</h5></a>
+  
+</div>
+
+    <div class="corpo" align="center">
+        
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+   
+      <p class="btnbts"><button class="openbtn" onclick="openNav()" style="color: #">&#9776;</button> </p>
+        <a class="nav
+        bar-brand" href="menuPrincipal.html">
+    <img src="logoatual.png" width="150" height="60" class="d-inline-block align-top" alt="" id="imgMen">
+  </a>
+        
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="mainUser.html"><span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="Contatos.html"><span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="calendarioTeste1.html"><span class="sr-only">(current)</span></a>
+      </li>
+       <div class="col-md-4">
+       <ul class="list-inline quicklinks">
+        <li class="nav-item active">
+                    
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Informações</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                         <ul type="disc">     
+                        <p><li>Nosso Menu possui uma ala disponível para informações sobre atualizações e nossas hashtags; </li></p>
+                              <hr/>
+
+                        <p><li>Nesta parte superior da nossa página tem atalhos para facilitar e levá-lo (a) rapidamente para visualizar o calendário, criar e visualizar os seus planejamento e para entrar em contato conosco, e visualizar o perfil; </li></p>
+                             <hr/>
+
+                        <p><li>Calendário - Lhe levará à uma página que informará o calendário completo do ano em que estamos, a data de hoje, datas comemorativas, mostrará também apenas o calendário do mês em que estamos. (Créditos ao icalendario, acesse icalendário.com); </li></p>
+                             <hr/>
+
+                        <p><li>Informações - Apresentação dos atalhos disponíveis para o usuário; </li></p>
+                             <hr/>
+
+                        <p><li>Criar Planejamento - Local onde você poderá, obviamente criar seus planejamentos, adicionar um título, torná-lo público ou privado, adicionar uma descrição, e organizá-lo como uma nota, um lembrete, ou uma lista; </li></p>
+                             <hr/>
+
+                        <p><li>Nos envie um e-mail - Fale conosco, mande ideias, reclame, elogie, expresse sua opinião para com o nosso site! </li></p>
+                             <hr/>
+
+                        <p><li>Perfil - Você poderá fazer alterações na sua conta como: foto de perfil, user, senha e biografia (atenção: o email não poderá ser modificado), e logo após poderá salvar sua alterações; </li></p>
+                             <hr/>
+
+                        <p><li>Logout - Saia da sua conta.</li></p>
+                             <hr/>
+                              
+                        <br><li><h5>Obrigada por juntar-se a nós do BTS!!! ;)</h5></li>
+                        </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        
+      </li>
+      </ul>
+      </div>
+
+    </ul>
+     
+      
+</div>
+         <ul>
+         <li class="nav-item dropdown no-arrow">
+             <div class='w3-container w3-right w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-right: 2%; max-width: 100px;' ng-controller= 'userController'>
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{}}</span>
+               <img id="imgUserProfiler" src='{{userImgSource}}' alt="placeholder+image" style="width: 80%" class="w3-circle w3-margin-top">
+              </a>
+              <!-- Dropdown - User Information -->
+                
+                
+              <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href='telaPerfilPrincipal.html' id="linkPerfil">
+                  <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Perfil
+                </a>
+                <a class="dropdown-item" href="TelaPerfil.html">
+                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Configurações
+                </a>
+                <a class="dropdown-item" href="#">
+                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Ajuda
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal" id="linkLogout">
+                  <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                  Logout
+                </a>
+              </div> 
+             </div>
+            </li>
+             </ul>
+      </nav>
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Aqui você pode modificar os dados do seu planejamento.</strong> Bom uso!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <br>
+        <br>
+
+        <img src="livro.jpg" alt="" class="rounded-circle" width=60 height=60 />
+        <h1 class="display-4"><b>Planejamento</b></h1>
+        <br>
+
+
+        <h3 class="plan1">Crie seu Planejamento</h3>
+
+        <br>
+
+        <div class="input1">
+            <input type="text" id='nomePlan' class="form-control" name="Nome Planejamento" placeholder="Adicionar Título ao Planejamento" required>
+        </div>
+
+        <br>
+        <div class="plan">
+            <h3>Quer que seu planejamento seja: </h3>
+            <p><select id="planSelectInput" class="caixa">
+                    <option value="publico">Público</option>
+                    <option value="privado">Privado</option>
+                </select></p>
+
+            <h3>Descrição</h3>
+
+            <br />
+
+            <input type="text" id='descricao' class="form-control" name="descricao" placeholder="Breve Descrição da Atividade" required>
+        </div>
+        <br>
+        <br>
+
+        <div class="buttons">
+
+            <button type="button" class="btn btn-outline-danger">Adicionar Nota</button>
+
+            <button type="button" class="btn btn-outline-danger">Adicionar Lembrete</button>
+
+            <button type="button" class="btn btn-outline-danger">Adicionar Lista</button>
+            <br>
+             <br>
+            <div>
+                    <button class="w3-button w3-block w3-green w3-section w3-padding w3-hover-green" type="submit" ng-click='criarPlan()'>Criar</button>
+                </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        </div>
+
+
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form class="form" method="post" action="email.php">
+                            <div class="form-group">
+                                <label for="nome" class="col-form-label">Nome:</label>
+                                <input type="text" class="form-control" id="nome" name="nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Email:</label>
+                                <input type="text" class="form-control" id="email" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="mensagem" class="col-form-label">Mensagem:</label>
+                                <textarea class="form-control" id="mensagem" name="msg"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                    </div>
+                    
+                   
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="firebase.js"></script>
+    <script src="angularJS/angular.min.js"></script>
+    
+</body>
+</html>

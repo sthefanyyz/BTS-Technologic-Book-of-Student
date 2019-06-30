@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Teste Pesquisa</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+</head>
+<body role="document" ng-app="app" ng-controller="appCtrl as ctrl">
+  
+  
+  
+  <div class="container theme-showcase" role="main">
+    
+    <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Angular Firebase</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Ligues</a></li>
+              <li><a href="#">Grilles</a></li>
+      </ul>
+    </div>
+    </div>
+    </nav>
+    
+    <div class="page-header"><h1>{{ctrl.titre}}</h1></div>
+  
+    <form class="form-inline">
+  <div class="form-group">
+    
+    <input type="number" class="form-control" ng-model="ctrl.newLigue.id" placeholder="id">
+  </div>
+      <div class="form-group">
+    
+    <input type="text" class="form-control" ng-model="ctrl.newLigue.titre" placeholder="titre">
+  </div>
+  
+      <div class="form-group">
+    
+    <input type="text" class="form-control" ng-model="ctrl.newLigue.code" placeholder="code">
+  </div>
+      <div class="form-group">
+    
+    <input type="text" class="form-control" ng-model="ctrl.newLigue.sousTitre" placeholder="sous titre">
+  </div>
+  <button type="button" class="btn btn-default" ng-click="ctrl.addLigue()">Ajouter</button>
+</form>
+    
+    <table class="table">
+      <thead>
+              <tr>
+                <th>#</th>
+                <th>titulo</th>
+                <th>codigo</th>
+                <th>sous titre</th>
+              </tr>
+            </thead>
+    <tr ng-repeat="ligue in ctrl.ligues">
+      <td>{{ligue.id}}</td><td>{{ligue.titre}}</td><td>{{ligue.code}}</td><td>{{ligue.sousTitre}}</td>
+    </tr>
+  </table>
+  </div>
+    
+    <script>
+    angular.module('app',["firebase" ])
+.controller('appCtrl',function($scope,$firebaseArray,$firebaseObject){
+  this.titre = "Angular Firebase CRUD";
+  
+  var ref = new Firebase("https://intense-fire-5995.firebaseio.com/ligues");
+  this.ligues = $firebaseArray(ref);
+  this.newLigue = {id:null, titre:"", code:"", sousTitre: ""};
+  this.addLigue = function(){
+    
+    var ref3 = new Firebase("https://intense-fire-5995.firebaseio.com/ligues/"+this.newLigue.code);
+    var obj = $firebaseObject(ref3);
+    obj.titre = this.newLigue.titre;
+    obj.sousTitre = this.newLigue.sousTitre;
+    obj.code = this.newLigue.code;
+    obj.id = this.newLigue.id;
+    obj.$save().then(function(ref) {
+      console.log( obj.$id ); // true
+    }, function(error) {
+      console.log("Error:", error);
+    });
+    
+  };
+  
+      var ref2 = new Firebase("https://intense-fire-5995.firebaseio.com/ligues2");
+    this.ligues2 = $firebaseArray(ref2);
+    
+  
+});
+    
+    </script>
+</body>
+</html>

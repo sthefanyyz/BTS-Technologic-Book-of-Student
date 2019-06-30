@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en" ng-app='mainApp'>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<title>Meus Contatos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="icon" type="imagem/png" href="pngLivro.png" />
+    <link rel="stylesheet" type="text/css" href="pesquisa.css">
+    <link rel="stylesheet" type="text/css" href="CssMainUser.css">
+
+    <script src='angularJS/angular.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>
+
+    <script src='firebase.js'></script>
+    <script src='mainController.js'></script>
+    <script src='userController.js'></script>
+    <script src='perfilController.js'></script>
+<script src="mainUserJs.js"></script>
+    <script src="contPesq.js"></script>
+
+</head>
+
+<body>
+
+
+      <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#" style="color: #20FFC6"><h2>Principal</h2></a>
+            <a href="mainUser.html"><h5>Home</h5></a>
+            <a href="meuPerfil.html"><h5>Meu Perfil</h5></a>
+            <a href="Pesquisa.html"><h5>Contatos</h5></a>
+            <a href=""><h5>Calendário</h5></a>
+            <a href="telaPlanejamentos.html"><h5>Planejamentos</h5></a>
+  <a href="#" style="color: #20FFC6"><h2>Ajuda</h2></a>
+            <a href="" onClick="mostrarModal" data-toggle="modal" data-target="#exampleModalCenter"><h5>Informações</h5></a>
+            <a href="" data-toggle="modal" data-target="#exampleModal" data-whatever="@fat"><h5>Enviar Feedback</h5></a>      
+  <a href="#" style="color: #20FFC6"><h2>Configurações</h2></a>
+            <a href="TelaPerfil.html"><h5>Configurações do Perfil</h5></a>
+           
+  
+</div>
+
+    <div class="corpo">
+        
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark"> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+      <p class="btnbts"><button class="openbtn" onclick="openNav()" style="color: #">&#9776;</button> </p>
+        <a class="nav
+        bar-brand" href="menuPrincipal.html">
+    <img src="logoatual.png" width="150" height="60" class="d-inline-block align-top" alt="" id="imgMen">
+  </a>
+        
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="mainUser.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="Pesquisa.html">Contatos<span class="sr-only">(current)</span></a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="http://icalendario.br.com/">Calendário<span class="sr-only">(current)</span></a>
+      </li>
+       <div class="col-md-4">
+       <ul class="list-inline quicklinks">
+        <li class="nav-item active">
+                    
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Informações</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                         <ul type="disc">     
+                        <p><li>Nosso Menu possui uma ala disponível para informações sobre atualizações e nossas hashtags; </li></p>
+                              <hr/>
+
+                        <p><li>Nesta parte superior da nossa página tem atalhos para facilitar e levá-lo (a) rapidamente para visualizar o calendário, criar e visualizar os seus planejamento e para entrar em contato conosco, e visualizar o perfil; </li></p>
+                             <hr/>
+
+                        <p><li>Calendário - Lhe levará à uma página que informará o calendário completo do ano em que estamos, a data de hoje, datas comemorativas, mostrará também apenas o calendário do mês em que estamos. (Créditos ao icalendario, acesse icalendário.com); </li></p>
+                             <hr/>
+
+                        <p><li>Informações - Apresentação dos atalhos disponíveis para o usuário; </li></p>
+                             <hr/>
+
+                        <p><li>Criar Planejamento - Local onde você poderá, obviamente criar seus planejamentos, adicionar um título, torná-lo público ou privado, adicionar uma descrição, e organizá-lo como uma nota, um lembrete, ou uma lista; </li></p>
+                             <hr/>
+
+                        <p><li>Nos envie um e-mail - Fale conosco, mande ideias, reclame, elogie, expresse sua opinião para com o nosso site! </li></p>
+                             <hr/>
+
+                        <p><li>Perfil - Você poderá fazer alterações na sua conta como: foto de perfil, user, senha e biografia (atenção: o email não poderá ser modificado), e logo após poderá salvar sua alterações; </li></p>
+                             <hr/>
+
+                        <p><li>Logout - Saia da sua conta.</li></p>
+                             <hr/>
+                              
+                        <br><li><h5>Obrigada por juntar-se ao pessoal do BTS!!! ;)</h5></li>
+                        </ul>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+        
+      </li>
+      </ul>
+      </div>
+
+    </ul>
+     
+      
+</div>
+        
+        <div class='w3-container w3-right w3-padding-16 w3-dropdown-hover w3-transparent' style='margin-right: 2%; max-width: 100px;' ng-controller= 'userController'> 
+     <a><img id="imgUserProfiler" src='{{userImgSource}}' alt="placeholder+image" style="width: 50%" class="w3-circle w3-margin-top"></a>
+            <div class='w3-dropdown-content w3-bar-block w3-card-4 w3-black'>
+            <a href='telaPerfil.html' class="w3-bar-item w3-button w3-hover-teal"><i class='fa fa-edit'></i>Perfil</a>
+                <a href="" class="w3-bar-item w3-button w3-hover-teal" ng-click='userLogout()'><i class='fa fa-sign-out'>
+                    </i>Logout</a>
+                
+                </div>
+            </div>
+      </nav>
+        
+        
+
+    <div class="w-100 text-center">
+        <img src="lupa.png" class="imgLupa" />
+        <h1 class="pesquisa">Pesquisar Contatos</h1>
+    </div>
+
+
+    
+
+    <br>
+    <br>
+    <div class="form-group input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+        <input name="consulta" id="txt_consulta" placeholder="Pesquisar" type="text" class="form-control">
+    </div>
+
+    <table id="tabela" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Id</th>
+                <th>Telefone</th>
+                <th>Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>sthefanydrawings@gmail.com</th>
+                <td>66672</td>
+                <td>9299134-0540</td>
+                <td>http://gmail.com</td>
+            </tr>
+
+            <tr>
+                <th>victoria.santanasv15@gmail.com</th>
+                <td>35889</td>
+                <td>941-964-9543</td>
+                <td>http://gmail.com</td>
+            </tr>
+
+            <tr>
+                <th>teamStark@hotmail.com</th>
+                <td>66672</td>
+                <td>941-964-8535</td>
+                <td>http://stark.com</td>
+            </tr>
+
+            <tr>
+                <th>Eren@gmail.com</th>
+                <td>66672</td>
+                <td>941-964-8535</td>
+                <td>http://flexomat.com</td>
+            </tr>
+
+            <tr>
+                <th>ErwinMorre@hotmail.com</th>
+                <td>66672</td>
+                <td>941-964-8535</td>
+                <td>http://AoTinformation.com</td>
+            </tr>
+
+            <tr>
+                <th>BatmanApareceEmUltimato@yahoo.com</th>
+                <td>66672</td>
+                <td>941-964-8535</td>
+                <td>http://marvel.com</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+
+    </script>
+
+
+
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Nova mensagem</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" method="post" action="email.php">
+                        <div class="form-group">
+                            <label for="nome" class="col-form-label">Nome:</label>
+                            <input type="text" class="form-control" id="nome" name="nome">
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-form-label">Email:</label>
+                            <input type="text" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem" class="col-form-label">Mensagem:</label>
+                            <textarea class="form-control" id="mensagem" name="msg"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br />
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
